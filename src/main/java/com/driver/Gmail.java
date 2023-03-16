@@ -13,6 +13,9 @@ public class Gmail extends Email {
     Map<String,Pair> inbox;
     Map<String,Pair> trash;
 
+    public Gmail() {
+    }
+
     public Gmail(String emailId, int inboxCapacity) {
         super(emailId);
         this.inboxCapacity = inboxCapacity;
@@ -119,5 +122,25 @@ public class Gmail extends Email {
     public int getInboxCapacity() {
         // Return the maximum number of mails that can be stored in the inbox
         return this.inboxCapacity;
+    }
+
+    public void setInboxCapacity(int inboxCapacity) {
+        this.inboxCapacity = inboxCapacity;
+    }
+
+    public Map<String, Pair> getInbox() {
+        return inbox;
+    }
+
+    public void setInbox(Map<String, Pair> inbox) {
+        this.inbox = inbox;
+    }
+
+    public Map<String, Pair> getTrash() {
+        return trash;
+    }
+
+    public void setTrash(Map<String, Pair> trash) {
+        this.trash = trash;
     }
 }
